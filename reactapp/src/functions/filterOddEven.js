@@ -1,31 +1,16 @@
-export const filterOdd=(...arr)=>
-{
-    let ans=[];
-    arr.forEach(ele=>{
-        if(ele%2!=0)
-        {
-            ans.push(ele);
-        }
-    });
-    return ans;
-}
-export const filterEven=(...arr)=>
-{
-    let ans=[];
-    arr.forEach(ele=>{
-        if(ele%2==0)
-        {
-            ans.pusg(ele);
-        }
-    });
-    return ans;
-}
-export const generateRandomList=(n=7)=>
-{
-    let res=[];
-    for(let i=0;i<n;i++)
-    {
-        res.push(Math.floor(Math.random()*100));
+export function filterOdd(...elements) {
+    return elements.filter((x) => x % 2 !== 0);
+  }
+  
+  export function filterEven(...elements) {
+    return elements.filter((x) => x % 2 === 0);
+  }
+  
+  export function generateRandomList(n = 7) {
+    let a = [];
+    for (let i = 0; i < n; i++) {
+      let x = Math.floor(Math.random() * 100 + 1);
+      a.push(x);
     }
-    return res;
-}
+    return a;
+  }
